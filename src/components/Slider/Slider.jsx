@@ -1,12 +1,4 @@
-import { useState } from "react";
-
-function Slider({ label }) {
-  const [value, setValue] = useState(8);
-
-  const handleSliderChange = (event) => {
-    setValue(event.target.value);
-  };
-
+function Slider({ label, length, onChange }) {
   return (
     <div className="container">
       <div className="row">
@@ -18,13 +10,13 @@ function Slider({ label }) {
             max="20"
             step="1"
             id="customRange3"
-            value={value}
-            onChange={handleSliderChange}
+            value={length}
+            onChange={onChange}
           ></input>
         </div>
         <div className="col slider-label">
           <label for="customRange3" class="form-label text-white">
-            {label}: {value}
+            {label}: {length}
           </label>
         </div>
       </div>

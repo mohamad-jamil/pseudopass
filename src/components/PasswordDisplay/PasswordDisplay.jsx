@@ -1,6 +1,6 @@
 import "./PasswordDisplay.css";
 
-function PasswordDisplay() {
+function PasswordDisplay({ value }) {
   const handleCopy = () => {
     const inputValue = document.getElementById("copyField").value;
     navigator.clipboard.writeText(inputValue);
@@ -13,7 +13,7 @@ function PasswordDisplay() {
           type="text"
           id="copyField"
           className="form-control form-control-lg"
-          value="PASSWORD"
+          value={value}
           readOnly
         />
         <button
