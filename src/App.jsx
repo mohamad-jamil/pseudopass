@@ -14,9 +14,24 @@ function App() {
   const [hasSymbols, setHasSymbols] = useState(false);
 
   const handleGeneratePassword = () => {
-    console.log(
-      `Generating password with length: ${length}, uppercase: ${hasUppercase}, numbers: ${hasNumbers}, symbols: ${hasSymbols}`
-    );
+    setPassword("");
+
+    const lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
+    const uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numbers = "0123456789";
+    const symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+
+    const pool =
+      lowercaseCharacters +
+      (hasUppercase ? uppercaseCharacters : "") +
+      (hasNumbers ? numbers : "") +
+      (hasSymbols ? symbols : "");
+
+    for (let i = 0; i < length; i++) {
+      setPassword(
+        (prev) => prev + pool.charAt(Math.floor(Math.random() * pool.length))
+      );
+    }
   };
 
   return (
