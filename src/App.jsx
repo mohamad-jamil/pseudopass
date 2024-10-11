@@ -13,7 +13,7 @@ function App() {
   const [hasNumbers, setHasNumbers] = useState(false);
   const [hasSymbols, setHasSymbols] = useState(false);
 
-  const handleRegenerate = () => {
+  const handleGeneratePassword = () => {
     console.log(
       `Generating password with length: ${length}, uppercase: ${hasUppercase}, numbers: ${hasNumbers}, symbols: ${hasSymbols}`
     );
@@ -61,7 +61,7 @@ function App() {
       </div>
       <div className="row">
         <div className="col">
-          <Button label="Generate" handleClick={handleRegenerate} />
+          <Button label="Generate" handleClick={handleGeneratePassword} />
         </div>
       </div>
     </div>
