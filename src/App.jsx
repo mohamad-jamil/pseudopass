@@ -6,7 +6,7 @@ import Button from "./components/Button/Button";
 import { useState } from "react";
 
 function App() {
-  const [password, setPassword] = useState("Generate a password here!");
+  const [password, setPassword] = useState("");
 
   const [length, setLength] = useState(8);
   const [hasUppercase, setHasUppercase] = useState(false);

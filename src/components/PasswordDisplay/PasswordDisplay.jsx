@@ -2,8 +2,10 @@ import "./PasswordDisplay.css";
 
 function PasswordDisplay({ value }) {
   const handleCopy = () => {
-    const inputValue = document.getElementById("copyField").value;
-    navigator.clipboard.writeText(inputValue);
+    if (value) {
+      const inputValue = document.getElementById("copyField").value;
+      navigator.clipboard.writeText(inputValue);
+    }
   };
 
   return (
@@ -13,7 +15,7 @@ function PasswordDisplay({ value }) {
           type="text"
           id="copyField"
           className="form-control form-control-lg"
-          value={value}
+          value={value ? value : "Generate a password here!"}
           readOnly
         />
         <button
