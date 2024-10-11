@@ -6,3 +6,7 @@ body {
   font-size: 2rem;
   position: relative;
 }
+
+.password-display {
+  width: 30vw;
+}
