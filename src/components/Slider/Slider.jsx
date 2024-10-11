@@ -8,21 +8,27 @@ function Slider({ label }) {
   };
 
   return (
-    <>
-      <label for="customRange3" class="form-label text-white">
-        {label}: {value}
-      </label>
-      <input
-        type="range"
-        class="form-range"
-        min="8"
-        max="20"
-        step="1"
-        id="customRange3"
-        value={value}
-        onChange={handleSliderChange}
-      ></input>
-    </>
+    <div className="container">
+      <div className="row">
+        <div className="col slider">
+          <input
+            type="range"
+            class="form-range"
+            min="8"
+            max="20"
+            step="1"
+            id="customRange3"
+            value={value}
+            onChange={handleSliderChange}
+          ></input>
+        </div>
+        <div className="col slider-label">
+          <label for="customRange3" class="form-label text-white">
+            {label}: {value}
+          </label>
+        </div>
+      </div>
+    </div>
   );
 }
 
