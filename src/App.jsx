@@ -36,7 +36,10 @@ function App() {
 
   return (
     <div className="container d-flex flex-column vh-100 justify-content-center align-items-center">
-      <div className="title text-white mb-3">Password Generator</div>
+      <div className="h1 text-white mb-0">PseudoPass</div>
+      <div className="text-white mb-4">
+        <em>A pseudo-random password generator</em>
+      </div>
       <div className="password-display mb-3">
         <PasswordDisplay value={password} />
       </div>
