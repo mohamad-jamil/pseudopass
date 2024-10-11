@@ -1,6 +1,7 @@
 import "./App.css";
 import PasswordDisplay from "./components/PasswordDisplay/PasswordDisplay";
 import Switch from "./components/Switch/Switch";
+import Slider from "./components/Slider/Slider";
 
 function App() {
   return (
@@ -9,9 +10,12 @@ function App() {
       <div className="password-display mb-3">
         <PasswordDisplay />
       </div>
-      <div className="row">
+      <div className="row d-flex align-items-center">
         <div className="col">
-          <Switch label="Uppercase characters?" />
+          <Slider label="Length" />
+        </div>
+        <div className="col">
+          <Switch label="Uppercase?" />
         </div>
         <div className="col">
           <Switch label="Numbers?" />
