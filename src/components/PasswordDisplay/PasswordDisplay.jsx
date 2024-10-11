@@ -7,7 +7,7 @@ function PasswordDisplay() {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container">
       <div className="input-group">
         <input
           type="text"

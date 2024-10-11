@@ -6,8 +6,8 @@ import Slider from "./components/Slider/Slider";
 function App() {
   return (
     <div className="container d-flex flex-column vh-100 justify-content-center align-items-center">
-      <div className="title text-white mb-1">Password Generator</div>
-      <div className="password-display mb-3">
+      <div className="title text-white mb-3">Password Generator</div>
+      <div className="password-display mb-2">
         <PasswordDisplay />
       </div>
       <div className="row d-flex align-items-center">
